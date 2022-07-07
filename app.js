@@ -1,5 +1,14 @@
 function disemvowel(str) {
-    return str;
+    let myStr = [];
+    for (var i = 0; i < str.length; i++) {
+        myStr.push(str[i]);
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u'
+            || str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U'
+        ) {
+            myStr.pop();
+        }
+    }
+    return myStr.join('');
 }
 
 console.log(disemvowel("This website is for losers LOL!")); // "Ths wbst s fr lsrs LL!"
